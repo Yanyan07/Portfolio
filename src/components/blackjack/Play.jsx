@@ -56,32 +56,22 @@ export default function Play(props) {
       const playerVal = getCardsValue(playerCards);
       setPlayerValue(playerVal);
     }
-    console.log('dealer cal:', dealerValue);
-    console.log('player cal:', playerValue);
   }, [dealerCards, playerCards])
   
 
   useEffect(()=>{
     if(isFlip && dealerValue<=16){
-      console.log('player result', playerResult);
       if(playerResult!=='Player Bust' && playerResult!=='Player Blackjack'){
-        console.log('dealer<=16, deal more card?');
         setTimeout(()=>{
-          console.log('dealer<=16, pop more card?');
           const item = cards.pop();
-          console.log('dealer setTimeout,pop card?', item);
           item ? setDealerCards([...dealerCards, item]) : reStart();
         },500)
       }
-      console.log('dealer<=16');
     }
     if(isFlip && (dealerValue>=17||playerResult==='Player Bust'||playerResult==='Player Blackjack')){
       calcValue();
       setCount(count+1);
-      console.log('dealer>=17 || player over');
     }
-    console.log("dealer value: ", dealerValue);
-    console.log("player value: ", playerValue);
   },[isFlip,dealerValue,dealerResult,playerResult])
   
 
@@ -95,7 +85,6 @@ export default function Play(props) {
     }
     isBlackjack(dealerCards) && setDealerResult('Dealer Blackjack');
     if(isBlackjack(playerCards)) {
-      console.log('player blackjack!');
       setPlayerResult('Player Blackjack');
       setTimeout(()=>{
         setIsFlip(true);
@@ -201,7 +190,6 @@ export default function Play(props) {
         sum += 10;
       }
     }
-    console.log('get cards value: ', sum);
     return sum;
   }
   const calcValue  = ()=>{
