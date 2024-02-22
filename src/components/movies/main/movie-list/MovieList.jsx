@@ -136,7 +136,7 @@ export default function MovieList(props) {
   }
     
   const showDetail = (movieId)=>{
-    navigate(`detail/${movieId}`);
+    navigate(`/detail/${movieId}`);
   }
 
 

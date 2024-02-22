@@ -102,7 +102,8 @@ export default function MovieApp(props) {
       <Header data={{users:users, currentUser:currentUser}} />
 
       <Routes>
-        <Route path='/' element={<MovieList data={{types:genres, movies:movies}} />}  />
+        {/* <Route path='/' element={<MovieList data={{types:genres, movies:movies}} />}  /> */}
+        {['/','/Portfolio'].map((path,index) => (<Route key={index} path={path} element={<MovieList data={{types:genres, movies:movies}} />}  />) )}
         <Route path='/genres/:myinput' element={<MoviesByGenres data={{movies:movies}}/>}  />
         <Route path='/keywords/:myinput' element={<MoviesByKeywords data={{movies:movies}}/>}  />
         <Route path='/user/movies' element={<MoviesByUser data={{userMovies:currentUser.favoriteMovies}} onDeleteFavMovie={deleteFavoriteMovie} />}  /> 
