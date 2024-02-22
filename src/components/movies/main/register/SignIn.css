@@ -1,0 +1,49 @@
+
+.sign-in {
+  width: 90%;
+  height: 900px;
+  margin: 0 auto;
+  padding-top: 100px;
+  background-color: aliceblue;
+}
+.sign-in h1 {
+  padding-bottom: 50px;
+}
+.sign-in div {
+  padding: 10px;
+}
+.sign-in div input, .sign-in div button {
+  width: 350px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 5px;
+  margin:0 auto;
+}
+.sign-in .pin {
+  margin:50px auto;
+}
+.sign-in div input {
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+}
+.sign-in div button {
+  height: 80px;
+  background-color: #e67e00;
+  color: white;
+  text-align: left;
+  font-size: 16px;
+}
+.sign-register {
+  width: 350px;
+  margin: 0 auto;
+  text-align: left;
+}
+.sign-register span {
+  color: green;
+  font-size: 18px;
+  font-weight: 700;
+}
+.sign-in h1 {
+  text-align: center;
+}

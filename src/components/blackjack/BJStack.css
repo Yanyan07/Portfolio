@@ -1,0 +1,17 @@
+
+.tech-container {
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 70px;
+    padding:       10px;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+}
+
+.tech-container .close {
+    position: absolute;
+    top: -8px;
+    right: 0;
+}
