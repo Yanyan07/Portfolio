@@ -59,7 +59,7 @@ export default function Header(props) {
         <option value="genres">genres</option>
         <option value="keywords">keywords</option>
       </select>
-      <input className="search" placeholder="Search Movies" value={inputValue} onChange={handleInput} onKeyDown={handleKeyDown} />
+      <input className="search" placeholder="An option on the left, then search here" value={inputValue} onChange={handleInput} onKeyDown={handleKeyDown} />
       <button className="logo-search" onClick={handleClick}>
         <img className="search-img" src={require('../../../images/movies/search.png')} alt="search"/>
       </button>
